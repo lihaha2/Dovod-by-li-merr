@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400&family=Poiret+One&display=swap');
+/* font-family: 'Jost', sans-serif; */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Roadkill-Alternates', sans-serif;
+    color: #CCCCCC;
+    z-index: 3;
+}
+
+body{
+    background-image: url('../images/body.png');
+    background-repeat: repeat;
+    background-position: 0 0;
+}
+
+#root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    position: relative;
+    z-index: 1;
+    padding: 50px 50px 0 50px;
+    width: 1440px;
+    min-height: 900px;
+    background-color: #141414;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../images/background.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 0 0;
+}
+
+.header{
+    width: 100%;
+    height: 67px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+}
+
+.flex:first-child{
+    justify-content: flex-start;
+}
+
+.flex:last-child{
+    justify-content: flex-end;
+}
+
+.header__nav{
+    cursor: pointer;
+    width: 62px;
+    height: 15px;
+    background-image: url('../images/nav.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header__logo{
+    cursor: pointer;
+    width: 76px;
+    height: 42px;
+    background-image: url('../images/dovod.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.header__button{
+    user-select: none;
+    transition: 1s;
+    cursor: pointer;
+    height: max-content;
+    background-color: transparent;
+    outline: none;
+    padding: 10px 27px 11px 27px;
+    border: 1px solid rgba(204, 204, 204, 0.77);
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 29px;
+    color: #CCCCCC;
+}
+
+.header__button:hover{
+    color: #141414;
+    background-color: rgb(204, 204, 204);
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 311px;
+    max-width: 1304px;
+    margin: 184px 0 0 0;
+}
+.content__box{
+    margin: 0 30px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 432px;
+}
+
+.content__left{
+    white-space: nowrap;
+    font-family: 'Poiret One', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    height: max-content;
+    color: rgba(204, 204, 204, 0.83);
+    transform: rotate(-180deg);
+    writing-mode: vertical-rl;
+    margin: 0px 0px 0 -20px;
+}
+
+.content__button-group{
+    transition: 1s;
+    cursor: pointer;
+    width: max-content;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.content__button-img{
+    transition:background-image 1s;
+    background-image: url('../images/play.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center center;
+    width: 75px;
+    height: 75px;
+    margin: 0 0 15px 0;
+}
+
+.content__button-group:hover  .content__button-img{
+    transition:background-image 1s;
+    background-image: url('../images/play_hover.svg');
+}
+
+.content__body{
+    width: 36%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.content__body-title{
+    background-image: url('../images/dovod.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center center;
+    width: 100%;
+    height: 120px;
+}
+
+.content__body-text{
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    max-width: 481px;
+    color: #B7B7B7;
+}
+
+.content__body-imdb{
+    background-image: url('../images/IMDB.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center center;
+    width: 199px;
+    height: 36px;
+    margin: 32px 0 0 0;
+}
+
+.content__body:first-child{
+    align-items: center;
+}
+
+.footer{
+    margin: 140px 0 0 0;
+    max-width: 1340px;
+    min-height: 123px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer__cast{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer__cast-title{
+    background-image: url('../images/cast.svg');
+    background-size: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 37px;
+    height: 42px;
+}
+
+.footer__cast-actors{
+    margin: 11px 181px 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer__cast-actors > div{
+    display: flex;
+    align-items: center;
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 29px;
+    color: #CCCCCC;
+    height: 40px;
+    border-left: 2px solid rgba(204, 204, 204, 0.72);
+    padding: 0 0 0 15px;
+    margin: 0 64px 0 0;
+}
+
+.footer__cast-actors > div:first-child{
+    margin: 0 49px 0 0;
+}
+.footer__cast-actors > div:last-child{
+    margin: 0;
+}
+
+
+.footer__filmby-title{
+    background-image: url('../images/filmby.svg');
+    background-size: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 61px;
+    height: 42px;
+}
+
+
+.footer__teen{
+    background-image: url('../images/16.svg');
+    background-size: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 79px;
+    height: 120px;
+    margin: 0 0 0 82px;
+}
+
+.video__container{
+    top: 15vh;
+    flex-direction: row;
+    align-items: flex-start;
+    position: fixed;
+    width: 50vw;
+    height: calc(50vw / 16 * 9);
+    display: none;
+}
+
+.video{
+    width: 100%;
+    height: 100%;
+}
+
+.video__button{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1500px) {
+    .wrapper{
+        background-size: cover;
+    }
+
+    .footer__teen{
+        margin: 0;
+    }
+
+    .footer__cast-actors {
+        margin: 11px 181px 11px 0;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .footer__teen{
+        margin: 0 0 0 30px;
+        position: absolute;
+        right: 50px;
+        bottom: 0px;
+    }
+
+    .footer__cast-actors {
+        margin: 11px 0;
+        flex-wrap: wrap;
+    }
+    .content__left {
+        display: none;
+    }
+
+    .content__box {
+        max-width: max-content;
+        margin: 0 0px 30px 0;
+    }
+
+    .content__body {
+        width: max-content;
+        align-items: center;
+    }
+
+    .footer__filmby {
+        margin: 0 200px 0 0;
+    }
+
+    .content {
+        justify-content: center;
+        height: max-content;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content__body-text{
+        max-width: 270px;
+    }
+
+    .header {
+        height: max-content;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .flex{
+        width: max-content;
+    }
+
+    .header__nav{
+        display: none;
+    }
+    .header:last-child{
+        margin: 15px 0 0px 0;
+    }
+    .video__container{
+        width: 75vw;
+        height: 55vw;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .footer__filmby {
+        margin: 0 0px 0 0;
+    }
+
+    .content{
+        margin: 100px 0 0 0;
+    }
+}
